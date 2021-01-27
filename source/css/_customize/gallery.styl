@@ -1,0 +1,105 @@
+.album-wrapper-row {
+	text-align: center;
+  	padding: 0 2%;
+}
+
+.gallery-box {
+	display: inline-block;
+	margin: auto;
+
+	h5 {
+		color: $black;
+	}
+
+	h6 {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.gallery-cover-box {
+	text-align: center;
+	margin: 0 auto;
+	opacity: 0.82;
+	transition-duration: .2s;
+
+	&:hover {
+		opacity: 1;
+	}
+	
+	img {
+	object-fit: cover
+	border: 1.5px solid rgba($black, 0.5);
+	}
+}
+
+/* Ukitopia */
+.imghvr-blur {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  max-width: 100%;
+  background-color: transparent;
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border: 1px solid rgba($black, 0.5);
+  
+  img {
+    vertical-align: top;
+    max-width: 100%;
+	border: 0;
+  }
+  
+  figcaption {
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+  }
+  
+  p {
+		font-size: 28px;
+		color: $black;
+        font-family: $font-family-headings;
+        font-weight: 900;
+		line-height: 1.4rem;
+		position: relative;
+		top: 20%;
+		white-space: nowrap;
+  }
+  
+  &:hover {
+
+    img {
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+	  opacity: 0.8;
+    }
+    
+    figcaption {
+      opacity: 1;
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+  }
+}
+
+.imghvr-blur,
+.imghvr-blur:before,
+.imghvr-blur:after,
+.imghvr-blur *,
+.imghvr-blur *:before,
+.imghvr-blur *:after, {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}

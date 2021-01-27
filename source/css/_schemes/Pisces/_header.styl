@@ -1,0 +1,45 @@
+.site-brand-container {
+  background: $color-brand;
+  opacity: 1;
+  transition-duration: .2s;
+  border-radius: $border-radius $border-radius 0 0;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .site-nav-on & {
+    +tablet-mobile() {
+      box-shadow: 0 0 16px rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.site-meta {
+  padding: 0;
+  margin: 6px 0 3px;
+}
+
+.brand {
+  padding: 0;
+}
+
+.site-subtitle {
+  margin: 10px 10px;
+  top: -9px !important;
+}
+
+.site-nav-toggle, .site-nav-right {
+  +tablet() {
+    flex-column();
+  }
+
+  .toggle {
+    color: $color-block;
+
+    .toggle-line {
+      background: $color-block;
+    }
+  }
+}

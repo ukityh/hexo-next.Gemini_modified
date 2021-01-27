@@ -1,0 +1,49 @@
+.sidebar-inner {
+  color: rgba($color-font,0.5);
+  padding: $sidebar-padding 10px;
+  text-align: center;
+  //backdrop-filter: blur(15px) saturate(110%);
+  background-color: rgba($color-block, $post-block-opacity);
+  box-shadow: $box-shadow-hover;
+  transition-duration: .2s;
+  
+  ::-webkit-scrollbar {
+    height: .3rem;
+    width: .3rem;
+  }
+
+    &:hover {
+      background-color: rgba($color-block, $post-hover-opacity);
+	  }
+}
+
+.site-overview-item:not(:first-child) {
+  margin-top: 18px;
+}
+
+.cc-license {
+  .cc-opacity {
+    border-bottom: none;
+    opacity: .7;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  img {
+    display: inline-block;
+  }
+}
+
+@import 'sidebar-author';
+@import 'sidebar-author-links';
+@import 'sidebar-button';
+@import 'sidebar-blogroll';
+@import 'sidebar-dimmer';
+@import 'sidebar-nav';
+@import 'sidebar-toggle';
+
+@import 'sidebar-toc' if (hexo-config('toc.enable'));
+
+@import 'site-state' if (hexo-config('site_state'));

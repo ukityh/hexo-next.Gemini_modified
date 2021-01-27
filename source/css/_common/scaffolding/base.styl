@@ -1,0 +1,163 @@
+$background-image = hexo-config('background.image')
+
+::selection {
+  background: $color-hover;
+  color: $color-block;
+}
+
+html, body {
+  height: 100%;
+  cursor: url($cursor-normal),auto !important;
+}
+
+body {
+  background: var(--body-bg-color);
+  color: $color-font;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  min-height: 100%;
+  position: relative;
+  transition: all $transition-ease;
+}
+
+body:before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url($background-image)
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 20px 0 15px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: .8em;
+}
+
+for $headline in (1 .. 6) {
+  h{$headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * $headline;
+  }
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+a, span.exturl {
+  color: $color-font;
+  outline: 0;
+  text-decoration: none;
+  word-wrap();
+  transition-duration: .12s;
+  cursor:url($cursor-pointer),auto !important;;
+
+  &:hover {
+    border-bottom-color: $color-hover;
+    color: $color-hover;
+  }
+
+  // For spanned external links.
+  cursor: url($cursor-pointer),auto !important;
+}
+
+input {
+  cursor: url($cursor-pointer),auto !important;
+}
+
+iframe, img, video, embed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+hr { 
+  display: block; 
+  height: 2px; border: 0; 
+  border-top: 1px dotted $color-font;
+  margin: 1.4rem 0 1.2rem 0; 
+  padding: 0; 
+}
+
+blockquote{
+    color: $color-font;
+    margin: 0 1rem 0 .2rem;
+    padding: 0 0 0 1.4rem;
+    border-left: 1px $color-font dashed;
+	animation:fadein .2s ease-in;
+	-webkit-animation:fadein .2s ease-in;
+	-moz-animation:fadein .2s ease-in;
+	-o-animation:fadein .2s ease-in;
+	-ms-animation:fadein .2s ease-in;
+	opacity: 0.7;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+del {
+  	opacity: 0.7;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+	height: .4rem;
+	width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: .2rem;
+	background-color: rgba($color-block, 0.1);
+}
+
+::-webkit-scrollbar-corner {
+	border-radius: .2rem;
+	background-color: rgba($color-block, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: rgba($color-hover, 0.3);
+
+	&:window-inactive {
+	background-color: rgba($color-hover, 0.3);
+  }
+
+	&:hover {
+	background-color: rgba($color-hover, 0.5);
+	}
+
+	&:active {
+    background-color: rgba($color-hover, 0.5);
+	}
+}

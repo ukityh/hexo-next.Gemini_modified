@@ -1,0 +1,46 @@
+.site-nav {
+  +tablet() {
+    display: none;
+  }
+}
+
+.menu .menu-item {
+  display: block;
+  margin: 0;
+
+  a, span.exturl {
+    padding: 5px 20px;
+    position: relative;
+    text-align: left;
+    transition-property: background-color;
+    font-family: $font-family-posts;
+  }
+
+  +tablet-mobile() {
+    &.menu-item-search {
+      display: none;
+    }
+  }
+
+  .badge {
+    background: rgba($color-brand,0.85);
+    border-radius: 10px;
+    color: $color-block;
+    float: right;
+    padding: 2px 5px;
+  }
+}
+
+if (!hexo-config('menu_settings.badges')) {
+  .main-menu .menu-item-active::after {
+    background: $color-hover;
+    border-radius: 50%;
+    content: ' ';
+    height: 6px;
+    margin-top: -3px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 6px;
+  }
+}

@@ -1,0 +1,29 @@
+{%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
+{%- set ccText = theme.creative_commons.license | upper %}
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+    {%- if page.author %}
+      {{ __('post.copyright.post_author') + __('symbol.colon') }}
+      {{- page.author }}
+    {%- elif author %}
+      {{ __('post.copyright.author') + __('symbol.colon') }}
+      {{- author }}
+    {%- endif %}
+  </li>
+  <li class="post-copyright-link">
+    {%- if page.post_link %}
+      {{ __('post.copyright.post_link') + __('symbol.colon') }}
+      {{ next_url(page.post_link, page.post_link, {title: page.title}) }}
+    {%- else %}
+      {{ __('post.copyright.link') + __('symbol.colon') }}
+      {{ next_url(page.permalink, page.permalink, {title: page.title}) }}
+    {%- endif %}
+  </li>
+  <li class="post-copyright-license">
+    {{ __('post.copyright.license_title') + __('symbol.colon') }} 
+    {{- __('post.copyright.license_content', next_url(ccURL, ccIcon + ccText)) }}
+  </li>
+</ul>
+</div>

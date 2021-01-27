@@ -1,0 +1,102 @@
+/* 友情链接 */
+
+.friends-links {
+	text-align: center;
+	top: 20px;
+    position: relative;
+}
+
+.imghvr-hinge-up {
+	border-radius: 100%;
+	position: relative;
+	display: inline-block;
+	margin: 0 10px;
+	width: 9rem;
+	height: 9rem;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-perspective: 50em;
+	perspective: 50em;
+	cursor: pointer;
+	text-align: center;
+	opacity: 0.93;
+	cursor: url($cursor-pointer),auto !important;
+
+	p {
+		font-size: 20px;
+		color: $white;
+        font-family: $font-family-headings;
+        font-weight: bold;
+		line-height: 1.4rem;
+		position: relative;
+		top: 20%;
+		white-space: nowrap;
+	}
+
+	img {
+        border: 0;
+		border-radius: 100%;
+		vertical-align: top;
+		max-width: 100%;  
+		-webkit-transform-origin: 50% 0%;
+		-ms-transform-origin: 50% 0%;
+		transform-origin: 50% 0%;
+        width: 100%;
+	}
+
+	figcaption {
+		background-color: inherit;
+		padding: 30px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		z-index: 1;
+		-webkit-transform: rotateX(90deg);
+		transform: rotateX(90deg);
+		-webkit-transform-origin: 50% 100%;
+		-ms-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+	}
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.05)
+		-webkit-transform: scale(1.05)
+		-ms-transform: scale(1.05)
+		-o-transform: scale(1.05)
+		
+		img {
+			opacity: 0;
+			-webkit-transform: rotateX(-90deg);
+			transform: rotateX(-90deg);
+		}
+
+		figcaption {
+			opacity: 1;
+			-webkit-transition-delay: 0.2s;
+			transition-delay: 0.2s;
+			-webkit-transform: rotateX(0deg);
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+.imghvr-hinge-up,
+.imghvr-hinge-up:before,
+.imghvr-hinge-up:after,
+.imghvr-hinge-up *,
+.imghvr-hinge-up *:before,
+.imghvr-hinge-up *:after, {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+

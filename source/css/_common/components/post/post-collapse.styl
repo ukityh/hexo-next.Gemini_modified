@@ -1,0 +1,86 @@
+.posts-collapse .post-content {
+  margin-bottom: $posts-collapse-margin;
+  margin-left: $posts-collapse-margin;
+  position: relative;
+
+  +mobile() {
+    margin-left: $posts-collapse-margin-mobile;
+    margin-right: $posts-collapse-margin-mobile;
+  }
+
+  .collection-title {
+    font-size: $font-size-large;
+    position: relative;
+  }
+
+  .collection-year {
+    line-height: 1.6em;
+    font-size: 40px;
+    font-family: $font-family-headings;
+    font-weight: bold;
+    margin: 50px 0 0 -20px;
+    position: relative;
+  }
+
+  .collection-header {
+    display: block;
+    margin-left: 20px;
+    font-family: $font-family-headings;
+
+    small {
+      color: $site-description-color;
+      margin-left: 5px;
+    }
+  }
+
+  .post-header {
+    border-bottom: 0px dashed $color-font;
+    // 2px is equal to half the width of .posts-collapse::before
+    margin: 10px 2px 0;
+    padding-left: 20px;
+    position: relative;
+    transition: border $transition-ease;
+
+    &::before {
+      background: $color-font;
+      left: -6px;
+      position: absolute;
+      top: $font-size-smallest;
+      transition: background $transition-ease;
+      round-icon(6px);
+    }
+
+    &:hover {
+      border-bottom-color: $color-hover;
+
+      &::before {
+        background: $color-hover;
+      }
+    }
+  }
+
+  .post-meta-container {
+    display: inline-block;
+    font-size: $font-size-smallest;
+    color: $site-description-color;
+    width: 4em;
+  }
+
+  .post-title {
+    display: inline;
+
+    a, span.exturl {
+      border-bottom: none;
+      color: $color-font;
+
+      &:hover {
+        color: $color-hover;
+      }
+    }
+
+    .fa-external-link-alt {
+      font-size: $font-size-small;
+      margin-left: 5px;
+    }
+  }
+}

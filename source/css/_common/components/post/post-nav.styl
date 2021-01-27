@@ -1,0 +1,45 @@
+.post-nav {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 10px 5px 0;
+}
+
+.post-nav-item {
+  flex: 1;
+
+  a {
+    border-bottom: none;
+    display: block;
+    font-size: $font-size-small;
+    color: rgba($color-font, 0.8);
+    line-height: 1.6;
+
+    &:hover {
+      color: $color-hover;
+    }
+
+    &:active {
+      top: 2px;
+    }
+  }
+
+  .fa {
+    font-size: $font-size-smallest;
+  }
+
+  &:first-child {
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+  &:last-child {
+    text-align: right;
+
+    .fa {
+      margin-left: 5px;
+    }
+  }
+}

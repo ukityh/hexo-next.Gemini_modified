@@ -1,0 +1,31 @@
+<div class="category-all-page">
+<center><h3 style="margin-top:0;position:relative;left:-8px;"><i class="fa fa-th" style="font-size:16px" aria-hidden="true"></i> {{__('state.categories')}}</h3></center>
+  <div style="line-height:1.3em" class="category-all-title">
+    {{ _p('counter.categories', site.categories.length) }}
+  </div>
+  <div class="category-all">
+    {{ list_categories() }}
+  </div>
+</div>
+
+<div class="post-tags">
+<center><a href="/archives"><i class="fa fa-archive" aria-hidden="true"></i> {{__('state.archives')}}</a></center>
+</div>
+
+<center><h3 style="position:relative;left:-8px;padding-top:30px;"><i class="fa fa-tags" style="font-size:16px" aria-hidden="true"></i> {{__('state.tags')}}</h3></center>
+<div class="tag-cloud">
+  <div class="tag-cloud-title">
+    {{ _p('counter.tag_cloud', site.tags.length) }}
+  </div>
+  <div class="tag-cloud-tags">
+    {{ tagcloud({
+      min_font: theme.tagcloud.min,
+      max_font: theme.tagcloud.max,
+      amount  : theme.tagcloud.amount,
+      orderby : theme.tagcloud.orderby,
+      order   : theme.tagcloud.order,
+      class   : 'tag-cloud'
+      })
+    }}
+  </div>
+</div>

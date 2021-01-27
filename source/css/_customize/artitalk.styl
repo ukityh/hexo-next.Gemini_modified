@@ -1,0 +1,210 @@
+/* Artitalk */
+#artitalk_main {
+	position: relative !important;
+	right: 1.3% !important;
+
+	p {
+		color: $color-font !important;
+		font-weight: 400 !important;
+	}
+
+	img {
+		margin-left: 0;
+		border: 0;
+		opacity: 1;
+		
+	&:hover {
+      transform: scale(1)
+      -webkit-transform: scale(1)
+      -ms-transform: scale(1)
+      -o-transform: scale(1)
+      }
+	}
+
+	iframe {
+		margin-left: 0;
+	}
+}
+
+#artitalk_main svg {
+    cursor: url($cursor-pointer),auto !important;
+}
+
+#artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+	line-height: 1.4rem !important;
+	padding: 1em 1em 0 !important;
+	word-break: break-all;
+	word-wrap:break-word;
+	margin: 0 0 2rem 65px !important;
+	background: linear-gradient(90deg,rgba(255,244,235,.8) 0,rgba(253,237,242,.8) 20%,rgba(248,239,246,.8) 40%,rgba(231,244,247,.8) 60%,rgba(233,248,244,.8) 80%,rgba(239,248,242,.8) 100%) !important;
+}
+
+#artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
+	border-right-color: rgba(253,237,242,.8) !important;
+}
+
+
+.cbp_tmtimeline>li .cbp_tmlabel {
+	line-height: 1.4rem !important;
+	padding: 1em 1em 0 !important;
+	left: 2.5%;
+	word-break: break-all;
+	word-wrap:break-word;
+	margin: 0 0 2rem 65px !important;
+	background: linear-gradient(90deg,rgba(255,244,235,.8) 0,rgba(253,237,242,.8) 20%,rgba(248,239,246,.8) 40%,rgba(231,244,247,.8) 60%,rgba(233,248,244,.8) 80%,rgba(239,248,242,.8) 100%) !important;
+}
+
+#artitalk_main .cbp_tmtimeline>li .cbp_tmlabel:after {
+	border-right-color: rgba(253,237,242,.8) !important;
+}
+
+
+#operare_artitalk .at_button, #artitalk_main .at_button {
+	background: rgba(253,237,242,.8) !important;
+	color: $color-font !important;
+	padding: .2rem .4rem !important;
+	box-shadow: 0px 0px 1px rgba($black, 0.3);
+	transition-duration: .18s;
+	opacity: 0.6;
+	
+	&:hover {
+		background: rgba(248,239,246,.8) !important
+		opacity: 1;
+		cursor: url($cursor-pointer),auto !important;
+	}
+	
+	&:active {
+		opacity: 1;
+	}
+}
+
+#artitalk_main #shuoshuo_edit textarea {
+	cursor: url($cursor-text),auto !important;
+}
+
+#artitalk_main #shuoshuo_content {
+	padding: 0 !important;
+}
+
+#artitalk_main .power {
+	line-height: 1.2rem;
+}
+
+#artitalk_main .power a {
+	font-size: 1em !important;
+	cursor: url($cursor-pointer),auto !important;
+}
+
+#artitalk_main p.shuoshuo_time {
+    padding-top: .2rem !important;
+	border-top: 1px dashed rgba($color-font,0.3) !important;
+}
+
+#artitalk_main .shuoshuo_author_img img {
+	height: 4rem;
+	width: 4rem;
+	position: relative;
+	bottom: .8rem;
+	right: .5%;
+	
+	@media screen and (max-width: 1000px) {
+		height: 3.4rem;
+		width: 3.4rem;
+		right: 0;
+		bottom: .5rem;
+	}
+	
+	@media screen and (max-width: 600px) {
+		height: 3.2rem;
+		width: 3.2rem;
+		left: .3%;
+	}
+}
+
+#artitalk_main .shuoshuo_text {
+	width: 93% !important;
+	border: 1px solid $color-font !important;
+	color: $color-font !important;
+	font-weight: 400 !important;
+	background-image: url(//cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/saybg.png) !important;
+}
+
+#artitalk_main .shuoshuo_inputs {
+	border: 1px solid rgba($color-font, 0.4) !important;
+	border-radius: 6px !important;
+	font-weight: 400 !important;
+	cursor: url($cursor-text),auto !important;
+}
+
+
+
+/**** shortpassage ****/
+
+ul.sp_tmtimeline {
+    padding: 0 !important;
+}
+
+div class.sp_tmlabel > li .sp_tmlabel {
+    margin-bottom: 0;
+}
+
+.sp_tmtimeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* The date/time */
+
+.sp_tmtimeline > li .sp_tmtime {
+    display: block;
+    /* width: 29%; */
+    /* padding-right: 110px; */
+    max-width: 70px;
+    position: absolute;
+}
+
+.sp_tmtimeline > li .sp_tmtime span {
+    display: block;
+    text-align: right;
+}
+
+
+div.sp_tmlabel > p {
+    margin-bottom: 0;
+}
+/* Right content */
+
+.sp_tmtimeline > li .sp_tmlabel {
+	margin: 1.2em 0;
+    padding: 1em 3em 1px;
+    line-height: 1.7;
+    position: relative;
+    /* transition: all 0.3s ease 0s; */
+	box-shadow: 0 0 4px rgba($color-font, 0.4);
+    display: block;
+	transition-duration: .2s
+
+	h3 {
+		padding-top: 0;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+
+	&:hover {
+		/* transform:scale(1.05); */
+		/* transform: translateY(-3px); */
+		box-shadow: 0 0 10px rgba($color-font, 0.5);
+	}
+}
+
+p.sp_tag {
+	font-size:13px;
+    padding-top: 3px;
+	margin-top: 40px;
+	text-align: center;
+	border-top: 1px solid rgba($color-font, 0.2);
+	opacity: 0.85;
+}
+/* Media */

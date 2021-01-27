@@ -1,0 +1,56 @@
+.site-meta {
+  flex-grow: 1;
+  text-align: center;
+
+  +mobile() {
+    text-align: center;
+  }
+}
+
+.custom-logo-image {
+  margin-top: 20px;
+
+  +tablet-mobile() {
+    display: none;
+  }
+}
+
+.brand {
+  border-bottom: none;
+  color: $color-block;
+  display: inline-block;
+  padding: 0 40px;
+
+  &:hover {
+    color: $color-block;
+  }
+}
+
+$fontface-sitemeta = hexo-config('fontface.sitemeta')
+
+@font-face {
+	font-family: 'UTOPIA';
+	src: url($fontface-sitemeta);
+}
+
+.site-title {
+  font-family: UTOPIA;
+  font-size: 40px;
+  font-weight: normal;
+  margin: 0;
+  top: 8px !important;
+}
+
+.site-subtitle {
+  color: $color-block;
+  font-size: $font-size-subtitle;
+  margin: 10px 0;
+}
+
+.use-motion {
+  .site-title, .site-subtitle, .custom-logo-image {
+    opacity: 0;
+    position: relative;
+    top: -10px;
+  }
+}

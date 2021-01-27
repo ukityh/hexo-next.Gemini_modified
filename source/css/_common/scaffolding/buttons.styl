@@ -1,0 +1,25 @@
+.btn {
+  background-color: rgba($color-block, 0.1);
+  border: 1px solid rgba($color-font, 0.8);
+  border-radius: $btn-default-radius;
+  display: inline-block;
+  font-size: $font-size-small;
+  line-height: 2;
+  padding: 0 20px;
+  transition: background-color $transition-ease;
+  cursor: url($cursor-pointer),auto !important;;
+
+  &:hover {
+    background: $color-hover;
+    border-color: rgba($color-font, 0.5);
+  }
+
+  + .btn {
+    margin: 0 0 8px 8px;
+  }
+
+  .fa-fw {
+    text-align: left;
+    width: (18em / 14);
+  }
+}

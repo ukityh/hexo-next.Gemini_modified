@@ -1,0 +1,36 @@
+.table-container {
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: $table-font-size;
+  margin: 0 0 20px 0;
+  width: 100%;
+	background-color: rgba($color-block, 0.1);
+}
+
+tbody tr {
+  &:nth-of-type(odd) {
+    background-color: rgba($color-block, 0.05)
+  }
+}
+
+caption, th, td {
+  padding: 8px;
+}
+
+th, td {
+  border: 1px solid $color-font;
+  border-bottom: 1px solid $color-font;
+}
+
+th {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+td {
+  border-bottom-width: 1px;
+}
